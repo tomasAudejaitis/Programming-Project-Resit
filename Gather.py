@@ -58,7 +58,7 @@ class Gather:
                 'commits': commits_count,
                 'contributors': contributors_count
             })
-            time.sleep(0.5)  # Respect API rate limits
+            time.sleep(0.05)  # Respect API rate limits
         return True
     def scrape_contributors(self):
         """Scrape trending page and get only the first 20 contributors """
@@ -125,13 +125,13 @@ class Gather:
                     'repo_name': name,
                     'contributors': []
                 })
-            time.sleep(1)  
+            time.sleep(0.05)  
         return True
     
     def save_contributors_to_file(self, filename):
-        """Save to a JSON file."""
-        print(f"Attempting to save contributors to {filename}")
-        print(f"Contributors data: {self.contributors_data}")
+        """Save  to a JSON file."""
+        # print(f"Attempting to save contributors to {filename}")
+        # print(f"Contributors data: {self.contributors_data}")
         if not self.contributors_data:
             print("No contributor data to save")
             return False
