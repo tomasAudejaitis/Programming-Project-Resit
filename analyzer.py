@@ -26,7 +26,7 @@ class RepoAnalyzer:
         # self.print_most_starred()
         # self.print_python_repos()
         
-    def get_average_contributors(self):
+    def getAverageContributors(self):
         """Return the average number of contributors across all repositories."""
         valid_contributors = [int(repo['contributors']) for repo in self.repos if repo['contributors'] != 'N/A']
         if not valid_contributors:
@@ -89,4 +89,32 @@ class RepoAnalyzer:
             for category, total in sorted(category_sums.items(), key=lambda x: x[1], reverse=True)
         ]
         return result
+    def rankTopContributors(self, contributors_filename='contributorData.json'):
+        """Return the top 20 contributors across all repositories ranked by commit count."""
+        if not os.path.exists(contributors_filename):
+            print(f"File {contributors_filename} does not exist")
+            return []
+
+        try:
+            with open(contributors_filename, 'r') as f:
+                contributors_data = json.load(f)
+        except Exception as e:
+            print(f"Error loading {contributors_filename}: {e}")
+            return []
+    
+        all_contributors = []
+        for repo in contributors_data:
+            repo_name = repo['repo_name']
+            for contributor in repo['contributors']:
+                if contributor['commit_count'] != 'N/A':
+                    all_contributors.append({
+                        'username': contributor['username'],
+                        'repo_name': repo_name,
+                        'commit_count': int(contributor['commit_count'])
+                    })
+
+       
+        sorted_contributors = sorted(all_contributors, key=lambda x: x['commit_count'], reverse=True)[:20]
+
+        return sorted_contributors
 
