@@ -1,0 +1,114 @@
+[
+    {
+        "name": "nomic-ai / gpt4all",
+        "stars": "74857",
+        "forks": "8129",
+        "language": "C++",
+        "commits": 2289,
+        "contributors": 114
+    },
+    {
+        "name": "tadata-org / fastapi_mcp",
+        "stars": "7371",
+        "forks": "604",
+        "language": "Python",
+        "commits": 250,
+        "contributors": 15
+    },
+    {
+        "name": "trailofbits / buttercup",
+        "stars": "463",
+        "forks": "55",
+        "language": "Python",
+        "commits": 721,
+        "contributors": 15
+    },
+    {
+        "name": "patchy631 / ai-engineering-hub",
+        "stars": "16443",
+        "forks": "2801",
+        "language": "Jupyter Notebook",
+        "commits": 379,
+        "contributors": 13
+    },
+    {
+        "name": "openai / codex",
+        "stars": "34240",
+        "forks": "3921",
+        "language": "Rust",
+        "commits": 739,
+        "contributors": 128
+    },
+    {
+        "name": "menloresearch / jan",
+        "stars": "36109",
+        "forks": "2111",
+        "language": "TypeScript",
+        "commits": 5647,
+        "contributors": 84
+    },
+    {
+        "name": "microsoft / generative-ai-for-beginners",
+        "stars": "94525",
+        "forks": "49215",
+        "language": "Jupyter Notebook",
+        "commits": 1505,
+        "contributors": 132
+    },
+    {
+        "name": "midday-ai / midday",
+        "stars": "9766",
+        "forks": "912",
+        "language": "TypeScript",
+        "commits": 3434,
+        "contributors": 23
+    },
+    {
+        "name": "xiaoyaocz / dart_simple_live",
+        "stars": "12258",
+        "forks": "921",
+        "language": "Dart",
+        "commits": 1021,
+        "contributors": 15
+    },
+    {
+        "name": "fastapi / full-stack-fastapi-template",
+        "stars": "35796",
+        "forks": "6836",
+        "language": "TypeScript",
+        "commits": 847,
+        "contributors": 67
+    },
+    {
+        "name": "mendableai / firecrawl",
+        "stars": "46484",
+        "forks": "4243",
+        "language": "TypeScript",
+        "commits": 3836,
+        "contributors": 97
+    },
+    {
+        "name": "umami-software / umami",
+        "stars": "29170",
+        "forks": "5347",
+        "language": "TypeScript",
+        "commits": 5006,
+        "contributors": 311
+    },
+    {
+        "name": "libsdl-org / SDL",
+        "stars": "13207",
+        "forks": "2300",
+        "language": "C",
+        "commits": 19939,
+        "contributors": 409
+    },
+    {
+        "name": "idosal / git-mcp",
+        "stars": "4634",
+        "forks": "335",
+        "language": "TypeScript",
+        "commits": 269,
+        "contributors": 13
+    }
+]

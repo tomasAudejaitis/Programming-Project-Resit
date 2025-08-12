@@ -1,0 +1,1076 @@
+[
+    {
+        "repo_name": "nomic-ai / gpt4all",
+        "contributors": [
+            {
+                "username": "manyoso",
+                "commit_count": 919
+            },
+            {
+                "username": "cebtenzzre",
+                "commit_count": 435
+            },
+            {
+                "username": "AndriyMulyar",
+                "commit_count": 170
+            },
+            {
+                "username": "zanussbaum",
+                "commit_count": 135
+            },
+            {
+                "username": "apage43",
+                "commit_count": 94
+            },
+            {
+                "username": "mvenditto",
+                "commit_count": 86
+            },
+            {
+                "username": "rguo123",
+                "commit_count": 39
+            },
+            {
+                "username": "cosmic-snow",
+                "commit_count": 28
+            },
+            {
+                "username": "niansa",
+                "commit_count": 19
+            },
+            {
+                "username": "bstadt",
+                "commit_count": 17
+            },
+            {
+                "username": "jacoobes",
+                "commit_count": 16
+            },
+            {
+                "username": "gukoff",
+                "commit_count": 15
+            },
+            {
+                "username": "mudler",
+                "commit_count": 12
+            },
+            {
+                "username": "ThiloteE",
+                "commit_count": 11
+            },
+            {
+                "username": "adtreat",
+                "commit_count": 11
+            },
+            {
+                "username": "mcembalest",
+                "commit_count": 11
+            },
+            {
+                "username": "qnixsynapse",
+                "commit_count": 10
+            },
+            {
+                "username": "Harvester62",
+                "commit_count": 10
+            },
+            {
+                "username": "TheBloke",
+                "commit_count": 9
+            },
+            {
+                "username": "lakkn",
+                "commit_count": 8
+            }
+        ]
+    },
+    {
+        "repo_name": "tadata-org / fastapi_mcp",
+        "contributors": [
+            {
+                "username": "shahar4499",
+                "commit_count": 145
+            },
+            {
+                "username": "itay-tadata",
+                "commit_count": 12
+            },
+            {
+                "username": "shaom",
+                "commit_count": 5
+            },
+            {
+                "username": "am1ter",
+                "commit_count": 3
+            },
+            {
+                "username": "floran-putter",
+                "commit_count": 2
+            },
+            {
+                "username": "MagnusS0",
+                "commit_count": 2
+            },
+            {
+                "username": "tori-tadata",
+                "commit_count": 2
+            },
+            {
+                "username": "HaohanTsao",
+                "commit_count": 1
+            },
+            {
+                "username": "ArielRotem1",
+                "commit_count": 1
+            },
+            {
+                "username": "bfontaine",
+                "commit_count": 1
+            },
+            {
+                "username": "danlapid",
+                "commit_count": 1
+            },
+            {
+                "username": "dexhunter",
+                "commit_count": 1
+            },
+            {
+                "username": "ierickson",
+                "commit_count": 1
+            },
+            {
+                "username": "irn77",
+                "commit_count": 1
+            },
+            {
+                "username": "jessesanford",
+                "commit_count": 1
+            }
+        ]
+    },
+    {
+        "repo_name": "trailofbits / buttercup",
+        "contributors": [
+            {
+                "username": "ret2libc",
+                "commit_count": 257
+            },
+            {
+                "username": "hbrodin",
+                "commit_count": 164
+            },
+            {
+                "username": "reytchison",
+                "commit_count": 121
+            },
+            {
+                "username": "evandowning",
+                "commit_count": 71
+            },
+            {
+                "username": "2over12",
+                "commit_count": 40
+            },
+            {
+                "username": "michaelbrownuc",
+                "commit_count": 28
+            },
+            {
+                "username": "BradSwain",
+                "commit_count": 11
+            },
+            {
+                "username": "dguido",
+                "commit_count": 9
+            },
+            {
+                "username": "Boyan-MILANOV",
+                "commit_count": 8
+            },
+            {
+                "username": "alessandrogario",
+                "commit_count": 3
+            },
+            {
+                "username": "Smjert",
+                "commit_count": 3
+            },
+            {
+                "username": "disconnect3d",
+                "commit_count": 2
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "computerality",
+                "commit_count": 1
+            },
+            {
+                "username": "kanno41",
+                "commit_count": 1
+            }
+        ]
+    },
+    {
+        "repo_name": "patchy631 / ai-engineering-hub",
+        "contributors": [
+            {
+                "username": "patchy631",
+                "commit_count": 231
+            },
+            {
+                "username": "sitamgithub-MSIT",
+                "commit_count": 51
+            },
+            {
+                "username": "ChawlaAvi",
+                "commit_count": 40
+            },
+            {
+                "username": "nikhil-1e9",
+                "commit_count": 26
+            },
+            {
+                "username": "namanvirk18",
+                "commit_count": 6
+            },
+            {
+                "username": "gmacario",
+                "commit_count": 4
+            },
+            {
+                "username": "rohitg00",
+                "commit_count": 3
+            },
+            {
+                "username": "DarkRaiderCB",
+                "commit_count": 2
+            },
+            {
+                "username": "annimukherjee",
+                "commit_count": 1
+            },
+            {
+                "username": "chojuninengu",
+                "commit_count": 1
+            },
+            {
+                "username": "codegen-sh[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "gagb",
+                "commit_count": 1
+            },
+            {
+                "username": "scott------",
+                "commit_count": 0
+            }
+        ]
+    },
+    {
+        "repo_name": "openai / codex",
+        "contributors": [
+            {
+                "username": "bolinfest",
+                "commit_count": 287
+            },
+            {
+                "username": "fouad-openai",
+                "commit_count": 46
+            },
+            {
+                "username": "aibrahim-oai",
+                "commit_count": 43
+            },
+            {
+                "username": "pakrym-oai",
+                "commit_count": 31
+            },
+            {
+                "username": "nornagon-openai",
+                "commit_count": 23
+            },
+            {
+                "username": "tibo-openai",
+                "commit_count": 21
+            },
+            {
+                "username": "easong-openai",
+                "commit_count": 20
+            },
+            {
+                "username": "dylan-hurd-oai",
+                "commit_count": 17
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "ae-openai",
+                "commit_count": 16
+            },
+            {
+                "username": "gpeal",
+                "commit_count": 16
+            },
+            {
+                "username": "jonchurch",
+                "commit_count": 9
+            },
+            {
+                "username": "LuciNyan",
+                "commit_count": 7
+            },
+            {
+                "username": "AbdelrhmanX7",
+                "commit_count": 6
+            },
+            {
+                "username": "tomc98",
+                "commit_count": 6
+            },
+            {
+                "username": "tomascupr",
+                "commit_count": 6
+            },
+            {
+                "username": "jcoens-openai",
+                "commit_count": 5
+            },
+            {
+                "username": "md-oai",
+                "commit_count": 5
+            },
+            {
+                "username": "edward-bayes",
+                "commit_count": 5
+            },
+            {
+                "username": "binbandit",
+                "commit_count": 5
+            }
+        ]
+    },
+    {
+        "repo_name": "menloresearch / jan",
+        "contributors": [
+            {
+                "username": "louis-menlo",
+                "commit_count": 1279
+            },
+            {
+                "username": "urmauur",
+                "commit_count": 856
+            },
+            {
+                "username": "0xHieu01",
+                "commit_count": 1
+            },
+            {
+                "username": "jan-service-account",
+                "commit_count": 311
+            },
+            {
+                "username": "hiento09",
+                "commit_count": 256
+            },
+            {
+                "username": "hahuyhoang411",
+                "commit_count": 222
+            },
+            {
+                "username": "hiro-v",
+                "commit_count": 175
+            },
+            {
+                "username": "namchuai",
+                "commit_count": 164
+            },
+            {
+                "username": "dan-menlo",
+                "commit_count": 6
+            },
+            {
+                "username": "freelerobot",
+                "commit_count": 4
+            },
+            {
+                "username": "imtuyethan",
+                "commit_count": 127
+            },
+            {
+                "username": "aindrajaya",
+                "commit_count": 113
+            },
+            {
+                "username": "qnixsynapse",
+                "commit_count": 104
+            },
+            {
+                "username": "ramonpzg",
+                "commit_count": 99
+            },
+            {
+                "username": "Minh141120",
+                "commit_count": 61
+            },
+            {
+                "username": "LazyYuuki",
+                "commit_count": 53
+            },
+            {
+                "username": "Van-QA",
+                "commit_count": 48
+            },
+            {
+                "username": "david-menloai",
+                "commit_count": 48
+            },
+            {
+                "username": "gau-nernst",
+                "commit_count": 45
+            },
+            {
+                "username": "tikikun",
+                "commit_count": 31
+            }
+        ]
+    },
+    {
+        "repo_name": "microsoft / generative-ai-for-beginners",
+        "contributors": [
+            {
+                "username": "koreyspace",
+                "commit_count": 342
+            },
+            {
+                "username": "john0isaac",
+                "commit_count": 166
+            },
+            {
+                "username": "yoshioterada",
+                "commit_count": 111
+            },
+            {
+                "username": "leestott",
+                "commit_count": 104
+            },
+            {
+                "username": "glaucia86",
+                "commit_count": 82
+            },
+            {
+                "username": "carlotta94c",
+                "commit_count": 48
+            },
+            {
+                "username": "softchris",
+                "commit_count": 42
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "nitya",
+                "commit_count": 38
+            },
+            {
+                "username": "bmerkle",
+                "commit_count": 34
+            },
+            {
+                "username": "FacerAin",
+                "commit_count": 33
+            },
+            {
+                "username": "Marcelasabogue",
+                "commit_count": 32
+            },
+            {
+                "username": "kinfey",
+                "commit_count": 30
+            },
+            {
+                "username": "hyoshioka0128",
+                "commit_count": 23
+            },
+            {
+                "username": "BethanyJep",
+                "commit_count": 17
+            },
+            {
+                "username": "paladique",
+                "commit_count": 16
+            },
+            {
+                "username": "nhlongnguyen",
+                "commit_count": 16
+            },
+            {
+                "username": "PabloNunes",
+                "commit_count": 16
+            },
+            {
+                "username": "skytin1004",
+                "commit_count": 14
+            },
+            {
+                "username": "erencanbas",
+                "commit_count": 10
+            }
+        ]
+    },
+    {
+        "repo_name": "midday-ai / midday",
+        "contributors": [
+            {
+                "username": "pontusab",
+                "commit_count": 3403
+            },
+            {
+                "username": "BharathxD",
+                "commit_count": 3
+            },
+            {
+                "username": "Ifunanyacollins",
+                "commit_count": 0
+            },
+            {
+                "username": "ja3nyc",
+                "commit_count": 2
+            },
+            {
+                "username": "YazidKurdi",
+                "commit_count": 2
+            },
+            {
+                "username": "eraykeskinmac",
+                "commit_count": 2
+            },
+            {
+                "username": "federicoestevez",
+                "commit_count": 2
+            },
+            {
+                "username": "andreaselia",
+                "commit_count": 1
+            },
+            {
+                "username": "Ankur1493",
+                "commit_count": 1
+            },
+            {
+                "username": "Danm72",
+                "commit_count": 1
+            },
+            {
+                "username": "dhairyathedev",
+                "commit_count": 1
+            },
+            {
+                "username": "edymusajev",
+                "commit_count": 1
+            },
+            {
+                "username": "gip",
+                "commit_count": 1
+            },
+            {
+                "username": "joaopcm",
+                "commit_count": 1
+            },
+            {
+                "username": "FindMalek",
+                "commit_count": 1
+            },
+            {
+                "username": "RickyRAV",
+                "commit_count": 1
+            },
+            {
+                "username": "raikasdev",
+                "commit_count": 1
+            },
+            {
+                "username": "sagar-jani",
+                "commit_count": 1
+            },
+            {
+                "username": "sahildave",
+                "commit_count": 1
+            },
+            {
+                "username": "yashug",
+                "commit_count": 1
+            }
+        ]
+    },
+    {
+        "repo_name": "xiaoyaocz / dart_simple_live",
+        "contributors": [
+            {
+                "username": "xiaoyaocz",
+                "commit_count": 841
+            },
+            {
+                "username": "bgylde",
+                "commit_count": 42
+            },
+            {
+                "username": "AprDeci",
+                "commit_count": 38
+            },
+            {
+                "username": "ybhgl",
+                "commit_count": 34
+            },
+            {
+                "username": "SlotSun",
+                "commit_count": 28
+            },
+            {
+                "username": "Otiosum-coder",
+                "commit_count": 8
+            },
+            {
+                "username": "venkate123",
+                "commit_count": 8
+            },
+            {
+                "username": "abcghy",
+                "commit_count": 6
+            },
+            {
+                "username": "lemonfog",
+                "commit_count": 4
+            },
+            {
+                "username": "CNOCM",
+                "commit_count": 2
+            },
+            {
+                "username": "yeyebbc",
+                "commit_count": 2
+            },
+            {
+                "username": "ZhangTianrong",
+                "commit_count": 2
+            },
+            {
+                "username": "1411430556",
+                "commit_count": 2
+            },
+            {
+                "username": "s-kk",
+                "commit_count": 2
+            },
+            {
+                "username": "pugaizai",
+                "commit_count": 0
+            }
+        ]
+    },
+    {
+        "repo_name": "fastapi / full-stack-fastapi-template",
+        "contributors": [
+            {
+                "username": "tiangolo",
+                "commit_count": 193
+            },
+            {
+                "username": "alejsdev",
+                "commit_count": 125
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "estebanx64",
+                "commit_count": 22
+            },
+            {
+                "username": "patrick91",
+                "commit_count": 18
+            },
+            {
+                "username": "ebreton",
+                "commit_count": 8
+            },
+            {
+                "username": "tomerb",
+                "commit_count": 3
+            },
+            {
+                "username": "dmontagu",
+                "commit_count": 2
+            },
+            {
+                "username": "github-actions[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "RCheese",
+                "commit_count": 2
+            },
+            {
+                "username": "jpizquierdo",
+                "commit_count": 2
+            },
+            {
+                "username": "br3ndonland",
+                "commit_count": 2
+            },
+            {
+                "username": "svlandeg",
+                "commit_count": 1
+            },
+            {
+                "username": "santigandolfo",
+                "commit_count": 1
+            },
+            {
+                "username": "saltie2193",
+                "commit_count": 1
+            },
+            {
+                "username": "disrupted",
+                "commit_count": 1
+            },
+            {
+                "username": "rjmunro",
+                "commit_count": 1
+            },
+            {
+                "username": "rlonka",
+                "commit_count": 1
+            },
+            {
+                "username": "PhilippWu",
+                "commit_count": 1
+            },
+            {
+                "username": "bechtold",
+                "commit_count": 1
+            }
+        ]
+    },
+    {
+        "repo_name": "mendableai / firecrawl",
+        "contributors": [
+            {
+                "username": "nickscamara",
+                "commit_count": 1670
+            },
+            {
+                "username": "mogery",
+                "commit_count": 1033
+            },
+            {
+                "username": "rafaelsideguide",
+                "commit_count": 536
+            },
+            {
+                "username": "ericciarla",
+                "commit_count": 161
+            },
+            {
+                "username": "devin-ai-integration[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "ftonato",
+                "commit_count": 44
+            },
+            {
+                "username": "calebpeffer",
+                "commit_count": 32
+            },
+            {
+                "username": "mattjoyce",
+                "commit_count": 31
+            },
+            {
+                "username": "tomkosm",
+                "commit_count": 28
+            },
+            {
+                "username": "Sanix-Darker",
+                "commit_count": 21
+            },
+            {
+                "username": "JakobStadlhuber",
+                "commit_count": 13
+            },
+            {
+                "username": "rishi-raj-jain",
+                "commit_count": 13
+            },
+            {
+                "username": "aparupganguly",
+                "commit_count": 11
+            },
+            {
+                "username": "micahstairs",
+                "commit_count": 10
+            },
+            {
+                "username": "BexTuychiev",
+                "commit_count": 9
+            },
+            {
+                "username": "chand1012",
+                "commit_count": 7
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "MonsterDeveloper",
+                "commit_count": 6
+            },
+            {
+                "username": "snippet",
+                "commit_count": 6
+            },
+            {
+                "username": "RutamBhagat",
+                "commit_count": 6
+            }
+        ]
+    },
+    {
+        "repo_name": "umami-software / umami",
+        "contributors": [
+            {
+                "username": "mikecao",
+                "commit_count": 3026
+            },
+            {
+                "username": "franciscao633",
+                "commit_count": 604
+            },
+            {
+                "username": "briancao",
+                "commit_count": 432
+            },
+            {
+                "username": "gnarlex",
+                "commit_count": 54
+            },
+            {
+                "username": "Maxime-J",
+                "commit_count": 54
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "cywio",
+                "commit_count": 22
+            },
+            {
+                "username": "bilguun0203",
+                "commit_count": 18
+            },
+            {
+                "username": "atmonshi",
+                "commit_count": 18
+            },
+            {
+                "username": "MoltenCoffee",
+                "commit_count": 17
+            },
+            {
+                "username": "shubhusion",
+                "commit_count": 14
+            },
+            {
+                "username": "ym-project",
+                "commit_count": 13
+            },
+            {
+                "username": "winterrific",
+                "commit_count": 12
+            },
+            {
+                "username": "andlil",
+                "commit_count": 11
+            },
+            {
+                "username": "Sammy-T",
+                "commit_count": 11
+            },
+            {
+                "username": "harryo",
+                "commit_count": 11
+            },
+            {
+                "username": "bartoszhernas",
+                "commit_count": 10
+            },
+            {
+                "username": "BE-CH",
+                "commit_count": 9
+            },
+            {
+                "username": "quiple",
+                "commit_count": 9
+            },
+            {
+                "username": "RikoDEV",
+                "commit_count": 9
+            }
+        ]
+    },
+    {
+        "repo_name": "libsdl-org / SDL",
+        "contributors": [
+            {
+                "username": "slouken",
+                "commit_count": 7347
+            },
+            {
+                "username": "icculus",
+                "commit_count": 3002
+            },
+            {
+                "username": "sezero",
+                "commit_count": 1025
+            },
+            {
+                "username": "madebr",
+                "commit_count": 920
+            },
+            {
+                "username": "1bsyl",
+                "commit_count": 849
+            },
+            {
+                "username": "SDLWikiBot",
+                "commit_count": 840
+            },
+            {
+                "username": "Kontrabant",
+                "commit_count": 644
+            },
+            {
+                "username": "philippwiesemann",
+                "commit_count": 591
+            },
+            {
+                "username": "DavidLudwig",
+                "commit_count": 275
+            },
+            {
+                "username": "slime73",
+                "commit_count": 270
+            },
+            {
+                "username": "flibitijibibo",
+                "commit_count": 223
+            },
+            {
+                "username": "cgutman",
+                "commit_count": 188
+            },
+            {
+                "username": "smcv",
+                "commit_count": 170
+            },
+            {
+                "username": "vanfanel",
+                "commit_count": 147
+            },
+            {
+                "username": "gabomdq",
+                "commit_count": 141
+            },
+            {
+                "username": "isage",
+                "commit_count": 135
+            },
+            {
+                "username": "ccawley2011",
+                "commit_count": 126
+            },
+            {
+                "username": "Sackzement",
+                "commit_count": 119
+            },
+            {
+                "username": "FtZPetruska",
+                "commit_count": 102
+            },
+            {
+                "username": "0x1F9F1",
+                "commit_count": 92
+            }
+        ]
+    },
+    {
+        "repo_name": "idosal / git-mcp",
+        "contributors": [
+            {
+                "username": "idosal",
+                "commit_count": 168
+            },
+            {
+                "username": "liady",
+                "commit_count": 88
+            },
+            {
+                "username": "AshAnand34",
+                "commit_count": 2
+            },
+            {
+                "username": "eladcandroid",
+                "commit_count": 1
+            },
+            {
+                "username": "Livshitz",
+                "commit_count": 1
+            },
+            {
+                "username": "chaoliu719",
+                "commit_count": 1
+            },
+            {
+                "username": "oilbeater",
+                "commit_count": 1
+            },
+            {
+                "username": "macoughl",
+                "commit_count": 1
+            },
+            {
+                "username": "Naseem77",
+                "commit_count": 1
+            },
+            {
+                "username": "tosh",
+                "commit_count": 1
+            },
+            {
+                "username": "umuthopeyildirim",
+                "commit_count": 1
+            },
+            {
+                "username": "dependabot[bot]",
+                "commit_count": 0
+            },
+            {
+                "username": "sylg",
+                "commit_count": 1
+            }
+        ]
+    }
+]
