@@ -163,13 +163,13 @@
         }
         const data = await response.json();
 
-        // Debug: Log the JSON data to inspect its contents
+        
         console.log('Fetched JSON data:', data);
 
         const tbody = document.querySelector('#contributors-table tbody');
-        // Find top contributor (with "👑" ranking)
-        const topContributor = data.find(contributor => contributor.ranking === '👑');
-        // Update congratulatory message with top contributor's username or fallback
+        
+        const topContributor = data.find(contributor => contributor.ranking === '\ud83e\udd47');
+        
         const topUsernameSpan = document.querySelector('#top-username');
         const topContributorMessage = document.querySelector('#top-contributor-message');
         if (topContributor && topContributor.username) {
