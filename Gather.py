@@ -4,37 +4,24 @@ import requests
 import time
 import json
 
+
 class Gather:
     def __init__(self, github_token):
-        """Initialize token."""
         self.g = Github(github_token)
         self.repos = []
         self.contributors_data = []
     
     def scrape_trending(self):
-        """Scrape  trending page and fetch  data. Populates list."""
+       
         url = 'https://github.com/trending'
         headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers)
-        
-        if response.status_code != 200:
-            print(f"Failed to fetch trending page: HTTP {response.status_code}")
-            return False
-        
+        response = requests.get(url, headers=headers)    
         soup = BeautifulSoup(response.text, 'html.parser')
         repo_list = soup.find_all('article', class_='Box-row')
         print(f"Found {len(repo_list)} repositories on trending page")
-        
-        if not repo_list:
-            print("No repos found. Check if the 'Box-row' class has changed.")
-            return False
-        
         self.repos = []  # Clear any existing data
         for repo in repo_list:
             name_elem = repo.find('h2', class_='h3 lh-condensed')
-            if not name_elem:
-                print("No name  found for a repository, skipping...")
-                continue
             name = name_elem.text.strip().replace('\n', '').replace(' ', '').replace('/', ' / ')
             repo_name = name.replace(' / ', '/')
             star_elem = repo.find('a', class_='Link--muted', href=lambda x: x and '/stargazers' in x)
@@ -43,13 +30,10 @@ class Gather:
             fork_count = fork_elem.text.strip().replace(',', '') if fork_elem else '0'
             lang_elem = repo.find('span', itemprop='programmingLanguage')
             language = lang_elem.text.strip() if lang_elem else 'Unknown'
-            try:
-                repo_data = self.g.get_repo(repo_name)
-                commits_count = repo_data.get_commits().totalCount
-                contributors_count = repo_data.get_contributors().totalCount
-            except Exception as e:
-                print(f"Error fetching  data for {repo_name}: {e}")
-                commits_count = contributors_count = 'N/A'
+            repo_data = self.g.get_repo(repo_name)
+            commits_count = repo_data.get_commits().totalCount
+            contributors_count = repo_data.get_contributors().totalCount
+            #commits_count = contributors_count = 'N/A'
             self.repos.append({
                 'name': name,
                 'stars': star_count,
@@ -58,10 +42,9 @@ class Gather:
                 'commits': commits_count,
                 'contributors': contributors_count
             })
-            time.sleep(0.05)  # Respect API rate limits
+            time.sleep(0.05) 
         return True
     def scrape_contributors(self):
-        """Scrape trending page and get only the first 20 contributors """
         url = 'https://github.com/trending'
         headers = {'User-Agent': 'Mozilla/5.0'}
         print("Fetching trending page for contributors...")
@@ -69,72 +52,45 @@ class Gather:
 
         if response.status_code != 200:
             print(f"Failed to fetch trending page: HTTP {response.status_code}")
-            return False
-
+            return []
         soup = BeautifulSoup(response.text, 'html.parser')
         repo_list = soup.find_all('article', class_='Box-row')
         print(f"Found {len(repo_list)} repositories on trending page")
-
-        if not repo_list:
-            print("No repositories found. Check if the 'Box-row' class has changed.")
-            return False
-
-        self.contributors_data = []  # Clear any existing contributor data
+        self.contributors_data = []  
         for i, repo in enumerate(repo_list):
             print(f"Processing repository {i+1}/{len(repo_list)} for contributors...")
             name_elem = repo.find('h2', class_='h3 lh-condensed')
-            if not name_elem:
-                print("No name element found for a repository, skipping...")
-                continue
             name = name_elem.text.strip().replace('\n', '').replace(' ', '').replace('/', ' / ')
             repo_name = name.replace(' / ', '/')
             print(f"Repository name: {repo_name}")
-
-            try:
-                repo_data = self.g.get_repo(repo_name)
-                contributors_info = []
-                print(f"Fetching up to 20 contributors for {repo_name}...")
-                # Limit to first 20 contributors 
-                for j, contributor in enumerate(repo_data.get_contributors()):
-                    if j >= 20: 
-                        print(f"Reached limit of 20 contributors for {repo_name}")
-                        break
-                    print(f"Processing contributor {j+1}/20: {contributor.login}...")
-                    try:
-                        commits = repo_data.get_commits(author=contributor.login)
-                        commit_count = commits.totalCount
-                        contributors_info.append({
-                            'username': contributor.login,
-                            'commit_count': commit_count
-                        })
-                        print(f"Added {contributor.login} with {commit_count} commits")
-                    except Exception as e:
-                        print(f"Error fetching commits for {contributor.login}: {e}")
-                        contributors_info.append({
-                            'username': contributor.login,
-                            'commit_count': 'N/A'
-                        })
-                print(f"Collected {len(contributors_info)} contributors for {repo_name}")
-                self.contributors_data.append({
-                    'repo_name': name,
-                    'contributors': contributors_info
+            repo_data = self.g.get_repo(repo_name)
+            contributors_info = []
+            print(f"Fetching up to 20 contributors for {repo_name}...")
+            
+            
+            for j, contributor in enumerate(repo_data.get_contributors()):
+                if j >= 20: 
+                    print(f"Reached limit of 20 contributors for {repo_name}")
+                    break
+                print(f"{j+1}/20: {contributor.login}...")                 
+                commits = repo_data.get_commits(author=contributor.login)
+                commit_count = commits.totalCount
+                contributors_info.append({
+                    'username': contributor.login,
+                    'commit_count': int(commit_count)
                 })
-            except Exception as e:
-                print(f"Error fetching API data for {repo_name}: {e}")
-                self.contributors_data.append({
-                    'repo_name': name,
-                    'contributors': []
-                })
-            time.sleep(0.05)  
+              #  print(f"Added {contributor.login} with {commit_count} commits")
+            print(f"Collected {len(contributors_info)} contributors for {repo_name}")
+            self.contributors_data.append({
+                'repo_name': name,
+                'contributors': contributors_info 
+            })
+            time.sleep(0.05)
+              
         return True
     
     def save_contributors_to_file(self, filename):
         """Save  to a JSON file."""
-        # print(f"Attempting to save contributors to {filename}")
-        # print(f"Contributors data: {self.contributors_data}")
-        if not self.contributors_data:
-            print("No contributor data to save")
-            return False
         try:
             with open(filename, 'w') as f:
                 json.dump(self.contributors_data, f, indent=4)
@@ -149,6 +105,9 @@ class Gather:
         """Return repositories."""
         return self.repos
     
+    def getContributorData(self):
+        return self.contributors_data
+   
     def get_repo_by_name(self, name):
         """Return a specific repository by name, if it exists."""
         for repo in self.repos:
@@ -178,3 +137,9 @@ class Gather:
         except Exception as e:
             print(f"Error saving to {filename}: {e}")
             return False
+        
+    def saveRankedContributorsToJson(self,analyzer, output_filename,input_filename):
+        top_contributors= analyzer.rankTopContributors(input_filename)
+        with open(output_filename, 'w') as f:
+            json.dump(top_contributors, f, indent=4)
+          
