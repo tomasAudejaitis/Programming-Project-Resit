@@ -4,27 +4,25 @@ from analyzer import RepoAnalyzer
 from Frontend import Frontend
 
 if __name__ == "__main__":
-    # Load GitHub token from environment variable
-    github_token = os.getenv('GITHUB_TOKEN') or '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'
     
-    # Create Gather instance and scrape data
+    github_token = os.getenv('GITHUB_TOKEN') 
+    
+   
     gather = Gather(github_token)
-    if gather.scrape_trending():
-        # Save data to JSON file
-        gather.save_to_file('data.json')
-        gather.scrape_contributors()
-        gather.save_contributors_to_file("contributorData.json")
- 
+    gather.scrape_trending()
+    gather.save_to_file('data.json')
+    gather.scrape_contributors()
+    gather.save_contributors_to_file("contributorData.json")
+    gather.save_contributors_to_file('contributorData.json')
         
-        # Create RepoAnalyzer instance and execute analysis
-        analyzer = RepoAnalyzer(filename='data.json')
-        analyzer.execute()
-        commit_data = analyzer.percentageByCategory('language','commits')
+       
+    analyzer = RepoAnalyzer(filename='data.json')
+    analyzer.execute()
 
-        frontend= Frontend()
-        frontend.plotLanguageCommitPie(commit_data)
-        frontend.plotRepoBarCharts(analyzer, top_n=10)
-    else:
-        print("Failed to scrape trending repositories")
+    commit_data = analyzer.percentageByCategory('language','commits')   
+    gather.saveRankedContributorsToJson(analyzer, 'rankedContributorData.json', 'contributorData.json')
+    frontend= Frontend()
+    frontend.plotLanguageCommitPie(commit_data)
+    frontend.plotRepoBarCharts(analyzer, top_n=10)
 
         
