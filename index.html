@@ -163,21 +163,45 @@
         }
         const data = await response.json();
 
+        // Debug: Log the JSON data to inspect its contents
+        console.log('Fetched JSON data:', data);
+
         const tbody = document.querySelector('#contributors-table tbody');
-        const topContributor = data.find(contributor => contributor.ranking === '\ud83e\udd47');
-        document.querySelector('#top-username').textContent = topContributor.username;
-        data.forEach(contributor => {
-            if (contributor.commit_count !== 'N/A') {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${contributor.ranking}</td>
-                    <td>${contributor.username}</td>
-                    <td>${contributor.repo_name}</td>
-                    <td>${contributor.commit_count}</td>
-                `;
-                tbody.appendChild(row);
-            }
-        });
+        // Find top contributor (with "👑" ranking)
+        const topContributor = data.find(contributor => contributor.ranking === '👑');
+        // Update congratulatory message with top contributor's username or fallback
+        const topUsernameSpan = document.querySelector('#top-username');
+        const topContributorMessage = document.querySelector('#top-contributor-message');
+        if (topContributor && topContributor.username) {
+            topUsernameSpan.textContent = topContributor.username;
+        } else {
+            // Modified: Handle case where topContributor is undefined or lacks username
+            console.warn('No valid top contributor found in JSON data.');
+            topContributorMessage.textContent = 'No top contributor available at this time.';
+        }
+
+        // Populate table only if data is valid
+        if (Array.isArray(data)) {
+            data.forEach(contributor => {
+                if (contributor.commit_count !== 'N/A' && contributor.username && contributor.repo_name && contributor.ranking) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${contributor.ranking}</td>
+                        <td>${contributor.username}</td>
+                        <td>${contributor.repo_name}</td>
+                        <td>${contributor.commit_count}</td>
+                    `;
+                    tbody.appendChild(row);
+                } else {
+                    // Debug: Log invalid contributor entries
+                    console.warn('Skipping invalid contributor:', contributor);
+                }
+            });
+        } else {
+            // Modified: Handle case where data is not an array
+            console.error('JSON data is not an array:', data);
+            topContributorMessage.textContent = 'Error: Invalid contributor data format.';
+        }
     } catch (error) {
         console.error('Error loading contributors:', error);
         const contributorsSection = document.querySelector('#contributors-table').parentElement;
