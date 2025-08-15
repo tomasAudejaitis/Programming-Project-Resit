@@ -72,9 +72,9 @@
             border-bottom: 1px solid #e1e4e8;
         }
         th {
-            background-color: #f6f8fa;
+            background-color: #575a61;
             font-weight: 700;
-            color: #24292e;
+            color: #fbfbfb;
         }
         tr:hover {
             background-color: #f9f9f9;
@@ -103,8 +103,8 @@
 </head>
 <body>
     <header>
-        <h1>GitHub Trending Analyzed</h1>
-        <p>Look at these graphs and charts!</p>
+        <h1 style="text-align: center">GitHub Trending Analyzed</h1>
+        <p style="text-align: center">Comparing Commit Activity for Github's Trending Repositories</p>
     </header>
     <div class="container">
         <section>
@@ -133,7 +133,7 @@
         </section>
         <section>
             <h2 style="text-align: center;">
-            Github Ranked!
+            Github Ranked
             </h2>
             <p style="text-align: center;">
             <span id="top-contributor-message">Congratulations to the new King of Commits xX<span id="top-username">...</span>Xx for coding away and becoming the contributor with the most commits on all of Github's trending page!</span>
@@ -149,10 +149,12 @@
                 </thead>
                 <tbody></tbody>
             </table>
+            <p style = "text-align: center">***Github Ranked counts merges & co-authored commits while Github trending does not, which may cause discrepencies between the two. </p>
         </section>
     </div>
     <footer>
-        <p>Built by Tomas Audejaitis | Last Update 15 August 2025</p>
+        <p style = "text-align: center">Built by Tomas Audejaitis | Last Update 15 August 2025 </p>
+        
     </footer>
     <script>
        async function loadContributorData() {
