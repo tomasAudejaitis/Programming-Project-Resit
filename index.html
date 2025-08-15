@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #24292e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #24292e;
+        }
+        .chart {
+            text-align: center;
+        }
+        .chart img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        .chart img:hover {
+            transform: scale(1.02);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        th {
+            background-color: #f6f8fa;
+            font-weight: 700;
+            color: #24292e;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #24292e;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            section {
+                padding: 1rem;
+            }
+            .container {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GitHub Trending Analysis</h1>
+        <p>Explore trending repositories, commits, and contributors</p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Commits by Programming Language</h2>
+            <div class="chart">
+                <img src="language_commits_pie.png" alt="Commits by Language Pie Chart">
+            </div>
+        </section>
+        <section>
+            <h2>Top Repositories by Commits</h2>
+            <div class="chart">
+                <img src="repo_commits_bar.png" alt="Top Repositories by Commits">
+            </div>
+        </section>
+        <section>
+            <h2>Top Repositories by Stars</h2>
+            <div class="chart">
+                <img src="repo_stars_bar.png" alt="Top Repositories by Stars">
+            </div>
+        </section>
+        <section>
+            <h2>Top Repositories by Contributors</h2>
+            <div class="chart">
+                <img src="repo_contributors_bar.png" alt="Top Repositories by Contributors">
+            </div>
+        </section>
+        <section>
+            <h2>Top Contributors</h2>
+            <table id="contributors-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Repository</th>
+                        <th>Commits</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <p>Built by Tomas Audejaitis | Last Update August 15 2025</p>
+    </footer>
+    <script>
+       async function loadContributorData() {
+    try {
+        const response = await fetch('rankedContributorData.json');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch JSON: ${response.statusText}`);
+        }
+        const data = await response.json();
+
+        const tbody = document.querySelector('#contributors-table tbody');
+        data.forEach(contributor => {
+            if (contributor.commit_count !== 'N/A') {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${contributor.username}</td>
+                    <td>${contributor.repo_name}</td>
+                    <td>${contributor.commit_count}</td>
+                `;
+                tbody.appendChild(row);
+            }
+        });
+    } catch (error) {
+        console.error('Error loading contributors:', error);
+        const contributorsSection = document.querySelector('#contributors-table').parentElement;
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = `Error loading contributor data: ${error.message}`;
+        contributorsSection.appendChild(errorDiv);
+    }
+}
+
+window.onload = loadContributorData;
+    </script>
+</body>
+</html>
