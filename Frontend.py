@@ -17,7 +17,7 @@ class Frontend:
         plt.figure(figsize=(8, 8))
         colors = ['#0366d6', '#28a745', '#d73a49', '#f66a0a', '#6f42c1', "#bbbe0f", "#72dd30"]  
         plt.pie(percentages, labels=categories, autopct='%1.1f%%', startangle=140, colors=colors, textprops={'fontsize': 14})
-        plt.title('Commits by Programming Language', fontsize=16, pad=20)
+        plt.title("")
         plt.axis('equal')
         plt.savefig('language_commits_pie.png', dpi=300, bbox_inches='tight')  
         print("Pie chart saved as 'language_commits_pie.png'")
@@ -43,7 +43,7 @@ class Frontend:
                 values = [int(repo[field]) for repo in sorted_repos]
                 plt.figure(figsize=(12, 6))
                 plt.bar(names, values, color='#0366d6')
-                plt.title(f'Top {top_n} Repositories by {title_suffix}', fontsize=16)
+                plt.title("")
                 plt.xlabel('Repository', fontsize=12)
                 plt.ylabel(ylabel, fontsize=12)
                 plt.xticks(rotation=45, ha='right', fontsize=10)
