@@ -103,8 +103,8 @@
 </head>
 <body>
     <header>
-        <h1>GitHub Trending Analysis</h1>
-        <p>Explore trending repositories, commits, and contributors</p>
+        <h1>GitHub Trending Analyzed</h1>
+        <p>Look at these graphs and charts!</p>
     </header>
     <div class="container">
         <section>
@@ -132,10 +132,16 @@
             </div>
         </section>
         <section>
-            <h2>Top Contributors</h2>
+            <h2 style="text-align: center;">
+            Github Ranked!
+            </h2>
+            <p style="text-align: center;">
+            <span id="top-contributor-message">Congratulations to the new King of Commits xX<span id="top-username">...</span>Xx for coding away and becoming the contributor with the most commits on all of Github's trending page!</span>
+            </p>
             <table id="contributors-table">
                 <thead>
                     <tr>
+                        <th>Rank</th>
                         <th>Username</th>
                         <th>Repository</th>
                         <th>Commits</th>
@@ -146,7 +152,7 @@
         </section>
     </div>
     <footer>
-        <p>Built by Tomas Audejaitis | Last Update August 15 2025</p>
+        <p>Built by Tomas Audejaitis | Last Update 15 August 2025</p>
     </footer>
     <script>
        async function loadContributorData() {
@@ -158,10 +164,13 @@
         const data = await response.json();
 
         const tbody = document.querySelector('#contributors-table tbody');
+        const topContributor = data.find(contributor => contributor.ranking === '\ud83e\udd47');
+        document.querySelector('#top-username').textContent = topContributor.username;
         data.forEach(contributor => {
             if (contributor.commit_count !== 'N/A') {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${contributor.ranking}</td>
                     <td>${contributor.username}</td>
                     <td>${contributor.repo_name}</td>
                     <td>${contributor.commit_count}</td>
