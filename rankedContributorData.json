@@ -1,0 +1,122 @@
+[
+    {
+        "username": "DavidLazarescu",
+        "repo_name": "Librum-Reader / Librum",
+        "commit_count": 2604,
+        "ranking": "\ud83e\udd47"
+    },
+    {
+        "username": "rmarinho",
+        "repo_name": "dotnet / maui",
+        "commit_count": 2134,
+        "ranking": "\ud83e\udd48"
+    },
+    {
+        "username": "saghul",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 2075,
+        "ranking": "\ud83e\udd49"
+    },
+    {
+        "username": "vmihailenco",
+        "repo_name": "redis / go-redis",
+        "commit_count": 1754,
+        "ranking": "4th"
+    },
+    {
+        "username": "damencho",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 1752,
+        "ranking": "5th"
+    },
+    {
+        "username": "PureWeen",
+        "repo_name": "dotnet / maui",
+        "commit_count": 1750,
+        "ranking": "6th"
+    },
+    {
+        "username": "mattleibow",
+        "repo_name": "dotnet / maui",
+        "commit_count": 1706,
+        "ranking": "7th"
+    },
+    {
+        "username": "jeremyevans",
+        "repo_name": "ubicloud / ubicloud",
+        "commit_count": 1183,
+        "ranking": "8th"
+    },
+    {
+        "username": "hristoterezov",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 1115,
+        "ranking": "9th"
+    },
+    {
+        "username": "jsuarezruiz",
+        "repo_name": "dotnet / maui",
+        "commit_count": 1055,
+        "ranking": "10th"
+    },
+    {
+        "username": "hartez",
+        "repo_name": "dotnet / maui",
+        "commit_count": 958,
+        "ranking": "11th"
+    },
+    {
+        "username": "enescakir",
+        "repo_name": "ubicloud / ubicloud",
+        "commit_count": 935,
+        "ranking": "12th"
+    },
+    {
+        "username": "StephaneDelcroix",
+        "repo_name": "dotnet / maui",
+        "commit_count": 860,
+        "ranking": "13th"
+    },
+    {
+        "username": "Redth",
+        "repo_name": "dotnet / maui",
+        "commit_count": 781,
+        "ranking": "14th"
+    },
+    {
+        "username": "VikParuchuri",
+        "repo_name": "datalab-to / marker",
+        "commit_count": 729,
+        "ranking": "15th"
+    },
+    {
+        "username": "byucesoy",
+        "repo_name": "ubicloud / ubicloud",
+        "commit_count": 699,
+        "ranking": "16th"
+    },
+    {
+        "username": "paweldomas",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 659,
+        "ranking": "17th"
+    },
+    {
+        "username": "lyubomir",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 621,
+        "ranking": "18th"
+    },
+    {
+        "username": "yanas",
+        "repo_name": "jitsi / jitsi-meet",
+        "commit_count": 576,
+        "ranking": "19th"
+    },
+    {
+        "username": "qarmin",
+        "repo_name": "qarmin / czkawka",
+        "commit_count": 557,
+        "ranking": "20th"
+    }
+]
