@@ -20,9 +20,11 @@ class RepoAnalyzer:
         if not self.repos:
             print("No repositories to analyze")
             raise ValueError(f"No valid data available")
-   
+
+
     def execute(self):
-        """Execute analysis tasks.""" 
+        """Execute analysis tasks."""
+        
         
     def getAverageContributors(self):
         """Return the average number of contributors across all repositories."""
@@ -33,10 +35,12 @@ class RepoAnalyzer:
     
     def rankByField(self, rank):
         #Return repos ranked by the specified numeric field in descending order.
+
         valid_repos = [repo for repo in self.repos if repo[rank] != 'N/A']    
         sorted_repos = sorted(valid_repos, key=lambda x: int(x[rank]), reverse=True)
         return sorted_repos
         
+    
     def percentageByCategory(self, category_field, value_field):
         valid_repos = [repo for repo in self.repos if repo[value_field] != 'N/A']
         if not valid_repos:
@@ -56,7 +60,6 @@ class RepoAnalyzer:
             for category, total in sorted(category_sums.items(), key=lambda x: x[1], reverse=True)
         ]
         return result
-        
     def rankTopContributors(self, contributors_filename='contributorData.json'):
         """Return the top 20 contributors across all repositories ranked by commit count."""
         with open(contributors_filename, 'r') as f:
@@ -72,7 +75,12 @@ class RepoAnalyzer:
                         'commit_count': int(contributor['commit_count'])
                     })
         sorted_contributors = sorted(all_contributors, key=lambda x: x['commit_count'], reverse=True)[:20]
-        with open('rankedContributorData.json', 'w') as f:
-                json.dump(sorted_contributors, f, indent=4)
+        
+        medal = {1:'🥇', 2: '🥈',3:'🥉' }
+        for i, contributor in enumerate(sorted_contributors, 1):
+            if i <4:
+                contributor['ranking'] = medal.get(i)
+            else:
+                suffix = 'th'
+                contributor['ranking'] = f"{i}{suffix}"       
         return sorted_contributors
-
